@@ -1,0 +1,12 @@
+{
+  "name": "od",
+  "displayName": "od",
+  "expo": {
+    "name": "od",
+    "slug": "od",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
