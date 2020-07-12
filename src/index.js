@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { useFonts, Montserrat_700Bold, Montserrat_400Regular } from '@expo-google-fonts/montserrat';
-
 import { StatusBar } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,16 +7,9 @@ import theme from './assets/theme';
 
 import Routes from './routes';
 
-const app = () => {
+export default class App extends React.Component {
 
-  const [fontLoaded] = useFonts({
-    Montserrat_700Bold,
-    Montserrat_400Regular
-  })
-
-  if (!fontLoaded)
-    return <></>
-  else
+  render() {
     return (
       <>
         <StatusBar barStyle={'light-content'} />
@@ -28,7 +19,6 @@ const app = () => {
         </NavigationContainer>
       </>
     );
+  }
 
 }
-
-export default app;

@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
+    borderRadius: 2,
     marginVertical: 2,
     height: 40,
   },
@@ -11,7 +12,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 4
   },
   icon: {
     paddingHorizontal: 10

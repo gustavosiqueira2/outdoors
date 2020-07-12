@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
     borderColor: '#2FFF9D',
     marginLeft: 2,
     marginBottom: 5,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    borderRadius: 2
   },
   send_button: {
     height: 40,

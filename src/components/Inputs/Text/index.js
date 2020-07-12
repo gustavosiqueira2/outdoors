@@ -15,7 +15,8 @@ const textInput = ({ ...props }) => {
           paddingHorizontal: 10,
           fontSize: 18,
           fontFamily: 'Montserrat_400Regular',
-          marginBottom: 5
+          marginBottom: 5,
+          borderRadius: 2
         }}
         { ...props }
       />

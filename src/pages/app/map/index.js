@@ -40,7 +40,7 @@ const map = () => {
   const handleClick = () => dispatch({ type: 'SELECT_EVENT', event: {} })
 
   return (
-    <View style={{ flex: 1, flexDirection: 'row' }}>
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#1e1e1e' }}>
 
       <MapView
         style={{ position: 'absolute', height: '100%', width: '100%' }} customMapStyle={mapStyle} rotateEnabled={false} showsUserLocation={true}

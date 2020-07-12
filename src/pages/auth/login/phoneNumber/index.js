@@ -7,7 +7,11 @@ import FormTextInput from '../../../../components/Inputs/Text';
 import { View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const phoneNumber = () => {
+const phoneNumber = ({ navigation }) => {
+
+  const handleClick = () => {
+    navigation.navigate('Confirmation');
+  }
 
   return (
     <View style={styles.container}>
@@ -15,7 +19,7 @@ const phoneNumber = () => {
         <FormTextInput placeholder='Phone: +55 (21) 99042-8831' />
       </View>
       <View style={styles.send_button_container}>
-        <TouchableOpacity style={styles.send_button}>
+        <TouchableOpacity style={styles.send_button} onPress={() => handleClick()}>
           <Ionicons size={28} name='md-send' color='#1e1e1e' />
         </TouchableOpacity>
       </View>

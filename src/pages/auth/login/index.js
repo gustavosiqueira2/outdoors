@@ -6,7 +6,7 @@ import styles from './styles';
 import PhoneNumber from './phoneNumber';
 import RegisterButton from './registerButton';
 
-const login = () => {
+const login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
@@ -22,7 +22,7 @@ const login = () => {
       </View>
       <View style={styles.login_container}>
 
-        <PhoneNumber />
+        <PhoneNumber navigation={navigation}/>
 
         <RegisterButton icon='logo-facebook' text='Join with Facebook' color='#00f' />
         <RegisterButton icon='logo-google' text='Join with Google' color='#f00' />
