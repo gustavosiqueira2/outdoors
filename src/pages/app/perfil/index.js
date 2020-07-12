@@ -16,7 +16,7 @@ const perfil = () => {
 
       <View style={{ flex: 2, backgroundColor: '#1e1e1e' }}>
         <View style={{ flex: 2, flexDirection: 'row' }}>
-          <View style={{ flex: 3, alignItems: 'center', justifyContent: 'center', paddingTop: 10 }}>
+          <View style={{ flex: 3, alignItems: 'center', justifyContent: 'center', paddingTop: 20 }}>
             <View style={{ borderRadius: 50, width: 90, height: 90, backgroundColor: '#fff' }}>
 
             </View>
@@ -33,13 +33,13 @@ const perfil = () => {
             </View> */}
           </View>
         </View>
-        <View style={{ flex: 2, padding: 10, paddingTop: 15 }}>
+        <View style={{ flex: 2, padding: 10, paddingTop: 20 }}>
           <Text style={{ fontSize: 17, fontWeight: 'bold', marginBottom: 4, color: '#fff' }}>
             Guzin
           </Text>
           <Text style={{ fontSize: 14, color: '#fff' }}>
-            PLULUPLULU PLULUPLULUPLULUPLULU
-            PLULUPLULU
+            PLULUPLULU PLULUPLULUPLULUPLULUdasdsaDAWDAWODAWKODKAOWDKOA
+            PLULUPLULUdasdas
           </Text>
         </View>
       </View>

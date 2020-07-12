@@ -10,14 +10,22 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Map from '../pages/app/map';
 import Perfil from '../pages/app/perfil';
+import Event from '../pages/app/event';
 
-const returnIcon = (name) => { tabBarIcon: ({ color }) => (<Ionicons name={name} color={color} size={20} />) }
+const returnIcon = (name) => {
+  return {
+    tabBarIcon: ({ color }) => (<Ionicons name={name} color={color} size={24} />)
+  }
+}
 
 const appRoutes = () => {
 
+  // initial Route Map
+
   return (
     <Provider store={store}>
-      <Tab.Navigator initialRouteName="Perfil">
+      <Tab.Navigator tabBarOptions={{ showLabel: false }}>
+        <Tab.Screen name="Event" component={Event} options={returnIcon('md-add-circle-outline')} />
         <Tab.Screen name="Map" component={Map} options={returnIcon('ios-map')} />
         <Tab.Screen name="Perfil" component={Perfil} options={returnIcon('ios-person')} />
       </Tab.Navigator>

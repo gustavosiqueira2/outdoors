@@ -9,7 +9,10 @@ const markers = () => {
   const events = useSelector(state => state.events);
   const dispatch = useDispatch();
 
-  const handleClick = (event) => dispatch({ type: 'SELECT_EVENT', event });
+  const handleClick = (event) =>{
+    console.log(event)
+    dispatch({ type: 'SELECT_EVENT', event });
+  }
 
   return (
     <>

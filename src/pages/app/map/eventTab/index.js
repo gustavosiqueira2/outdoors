@@ -13,12 +13,12 @@ const eventTab = () => {
 
   const handleClick = () => containerHeight === '36%' ? setContainerHeight('98.5%') : setContainerHeight('36%');
 
-  if (selectedEvent.title)
+  if (selectedEvent.name)
     return (
       <TouchableWithoutFeedback onPress={() => handleClick()}>
         <View style={{ ...styles.container, ...{ height: containerHeight } }}>
-          <Text style={styles.title}>
-            {selectedEvent.title}
+          <Text style={styles.name}>
+            {selectedEvent.name}
           </Text>
           <Text style={styles.description}>
             bla

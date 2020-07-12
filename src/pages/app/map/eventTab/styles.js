@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 15
   },
-  title: {
+  name: {
     fontSize: 20,
     textAlign: 'center',
     marginBottom: 10

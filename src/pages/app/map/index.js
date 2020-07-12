@@ -43,7 +43,11 @@ const map = () => {
     <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#1e1e1e' }}>
 
       <MapView
-        style={{ position: 'absolute', height: '100%', width: '100%' }} customMapStyle={mapStyle} rotateEnabled={false} showsUserLocation={true}
+        style={{ position: 'absolute', height: '100%', width: '100%' }}
+        customMapStyle={mapStyle}
+        rotateEnabled={false}
+        showsUserLocation={true}
+        showsMyLocationButton={true}
         region={{ ...location.coords, ...{ latitudeDelta: 0.01, longitudeDelta: 0.01 } }}
         onPress={() => handleClick()}
       >
