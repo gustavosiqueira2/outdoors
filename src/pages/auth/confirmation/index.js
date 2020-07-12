@@ -19,7 +19,7 @@ const confirmation = () => {
       </View>
       <View style={styles.input_container}>
         <View style={styles.input}>
-          <FormTextInput placeholder='Ex: XB3KW7' />
+          {/* <FormTextInput placeholder='Ex: XB3KW7' /> */}
         </View>
         <View style={styles.button_container}>
           <TouchableOpacity style={styles.button}>

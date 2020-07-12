@@ -16,7 +16,7 @@ const phoneNumber = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.phone_input_container}>
-        <FormTextInput placeholder='Phone: +55 (21) 99042-8831' />
+        {/* <FormTextInput placeholder='Phone: +55 (21) 99042-8831' /> */}
       </View>
       <View style={styles.send_button_container}>
         <TouchableOpacity style={styles.send_button} onPress={() => handleClick()}>

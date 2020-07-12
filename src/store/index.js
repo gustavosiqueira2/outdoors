@@ -8,7 +8,14 @@ const INITIAL_STATE = {
     { name: 'Evento 4', coords: { latitude: -23.098917, longitude: -47.233844 } },
     { name: 'Evento 5', coords: { latitude: -23.097910, longitude: -47.236988 } },
   ],
-  selectedEvent: {}
+  selectedEvent: {},
+  event_creating: {
+    name: '',
+    coords: {
+      latitude: 0,
+      longitude: 0
+    }
+  }
 }
 
 const events = (state = INITIAL_STATE, action) => {
@@ -18,7 +25,18 @@ const events = (state = INITIAL_STATE, action) => {
       return { ...state, ...{ selectedEvent: action.event } };
     }
     case 'ADD_EVENT': {
-      return { ...state, events: [...state.events, action.event] };
+      state.events.push(action.event);
+      state.selectedEvent = action.event;
+      state.event_creating = INITIAL_STATE.event_creating;
+      return state;
+    }
+    case 'ADD_EVENT_NAME': {
+      state.event_creating.name = action.event.name;
+      return state;
+    }
+    case 'ADD_EVENT_COORDS': {
+      state.event_creating.coords = action.coords;
+      return state;
     }
     default:
       return state;

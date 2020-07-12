@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import * as Location from 'expo-location';
-
 import MapView from 'react-native-maps';
 import mapStyle from '../../../assets/mapStyle';
 
@@ -19,7 +18,6 @@ const map = () => {
   const dispatch = useDispatch();
 
   const getLocation = async () => {
-
     let { status } = await Location.requestPermissionsAsync();
 
     if (status !== 'granted') {
@@ -30,12 +28,9 @@ const map = () => {
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
     }
-
   };
 
-  useEffect(() => {
-    getLocation();
-  }, []);
+  useEffect(() => { getLocation() }, []);
 
   const handleClick = () => dispatch({ type: 'SELECT_EVENT', event: {} })
 
