@@ -27,14 +27,14 @@ Have you ever tried to find a party? it will be easier!
 ## Map
 
 <p align="center">
-  <img src="(https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/Map.png" />
+  <img src="https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/Map.png" />
 </p>
 
 ## Create Your Events
 
 <p align="center">
-  <img src="(https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/Create.png" />
-   <img src="(https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/PickLocation.png" />
+  <img src="https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/Create.png" />
+   <img src="https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/PickLocation.png" />
 </p>
 
 ## Contributing
