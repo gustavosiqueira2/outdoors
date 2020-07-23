@@ -24,6 +24,10 @@ Have you ever tried to find a party? it will be easier!
   * filter parties
   * share parties
   
+## Map
+
+![alt text](https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/Map.png)
+
 ## Contributing
 
 Wanna help? You can send mensages to me on gustavo.fariassiqueira@gmail.com
