@@ -30,7 +30,7 @@ const basics = ({ navigation }) => {
     <View style={styles.container}>
 
       <View style={styles.title_container}>
-        <Text style={styles.title}>Launch!</Text>
+        <Text style={styles.title}>Lets launch!</Text>
         <Text style={styles.subtitle}>but first, the Basics:</Text>
       </View>
 

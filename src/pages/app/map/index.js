@@ -44,7 +44,7 @@ const map = () => {
         showsUserLocation={true}
         showsMyLocationButton={true}
         region={{ ...location.coords, ...{ latitudeDelta: 0.01, longitudeDelta: 0.01 } }}
-        onPress={() => handleClick()}
+        onPanDrag={() => handleClick()}
       >
         <Markers />
       </MapView>

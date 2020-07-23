@@ -10,7 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Map from '../pages/app/map';
 import Perfil from '../pages/app/perfil';
-import Launchbase from '../pages/app/launchbase';
+import LaunchbaseRoutes from './launchbase.routes';
 
 const returnIcon = (name) => {
   return {
@@ -18,19 +18,21 @@ const returnIcon = (name) => {
   }
 }
 
-const appRoutes = () => {
+class appRoutes extends React.Component {
 
   // initial Route Map
 
-  return (
-    <Provider store={store}>
-      <Tab.Navigator tabBarOptions={{ showLabel: false }}>
-        <Tab.Screen name="Launchbase" component={Launchbase} options={returnIcon('ios-rocket')} />
-        <Tab.Screen name="Map" component={Map} options={returnIcon('ios-map')} />
-        <Tab.Screen name="Perfil" component={Perfil} options={returnIcon('ios-person')} />
-      </Tab.Navigator>
-    </Provider>
-  );
+  render() {
+    return (
+      <Provider store={store}>
+        <Tab.Navigator tabBarOptions={{ showLabel: false }}>
+          <Tab.Screen name="Launchbase" component={LaunchbaseRoutes} options={returnIcon('ios-rocket')} />
+          <Tab.Screen name="Map" component={Map} options={returnIcon('ios-map')} />
+          <Tab.Screen name="Perfil" component={Perfil} options={returnIcon('ios-person')} />
+        </Tab.Navigator>
+      </Provider>
+    );
+  }
 
 }
 

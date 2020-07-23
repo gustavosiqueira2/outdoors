@@ -7,9 +7,8 @@ import theme from './assets/theme';
 
 import Routes from './routes';
 
-export default class App extends React.Component {
+const app = () => {
 
-  render() {
     return (
       <>
         <StatusBar barStyle={'light-content'} />
@@ -19,6 +18,7 @@ export default class App extends React.Component {
         </NavigationContainer>
       </>
     );
-  }
 
 }
+
+export default app;

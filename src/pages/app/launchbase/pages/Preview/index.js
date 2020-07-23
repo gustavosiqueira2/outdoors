@@ -2,7 +2,8 @@ import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { View, Text} from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
+import styles from './styles';
 
 import Button from '../../components/button';
 
@@ -21,20 +22,44 @@ const preview = ({ navigation }) => {
     navigation.popToTop();
   }
 
-  return(
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>
-        {event.name}
-      </Text>
-      <Text>
-        {event.coords.latitude}
-      </Text>
-      <Text>
-        {event.coords.longitude}
-      </Text>
+  return (
+    <>
+      <ScrollView style={{
+        flex: 1,
+        padding: 25
+      }}>
+        <View style={{
+          marginBottom: 20
+        }}>
+          <Text style={{
+            fontSize: 38,
+            fontFamily: 'Montserrat_700Bold'
+          }}>
+            Preview
+          </Text>
+          <Text style={{
+            fontSize: 24,
+            fontFamily: 'Montserrat_400Regular',
+          }}>
+            Before your finish, lets check if evertinhg is correct.
+          </Text>
+        </View>
+        <Text style={styles.label_title}>
+          Name:
+          {event.name}
+        </Text>
+        <Text style={styles.label_title}>
+          Latitude:
+          {event.coords.latitude}
+        </Text>
+        <Text style={styles.label_title}>
+          longitude:
+          {event.coords.longitude}
+        </Text>
 
+      </ScrollView>
       <Button action={() => handleClick()} />
-    </View>
+    </>
   )
 
 }

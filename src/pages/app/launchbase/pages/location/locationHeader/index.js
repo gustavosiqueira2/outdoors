@@ -7,7 +7,7 @@ const locationHeader = () => {
 
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>SpacePoint</Text>
+      <Text style={styles.title}>SpacePoint!</Text>
       <Text style={styles.subtitle}>where it will be started?</Text>
     </View>
   )
