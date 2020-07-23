@@ -26,9 +26,9 @@ Have you ever tried to find a party? it will be easier!
   
 ## Map
 
-<h1 align="center">
+<div style="justify-content: center">
   ![alt text](https://github.com/GustavoFarias2/ReadMeImages/blob/master/outdoors/Map.png)
-</h1> 
+</div> 
 
 ## Contributing
 
