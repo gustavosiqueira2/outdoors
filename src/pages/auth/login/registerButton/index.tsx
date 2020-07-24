@@ -5,7 +5,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const registerButton = ({ icon, text, color }) => {
+type ButtonProps = {
+  icon: string,
+  text: string,
+  color: string
+}
+
+const registerButton = ({ icon, text, color }: ButtonProps) => {
 
   return (
     <View style={styles.container}>

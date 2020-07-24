@@ -5,7 +5,7 @@ import styles from './styles';
 
 import { Ionicons } from '@expo/vector-icons';
 
-const button = ({ action }) => {
+const button = ({ action }: any) => {
 
   return (
     <View style={styles.button_container}>

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import { useSelector } from 'react-redux';
-
 import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 
@@ -9,7 +7,7 @@ const eventTab = () => {
 
   const [containerHeight, setContainerHeight] = useState('36%');
 
-  const selectedEvent = useSelector((state) => state.selectedEvent);
+  const selectedEvent = { name: 'a' }
 
   const handleClick = () => containerHeight === '36%' ? setContainerHeight('98.5%') : setContainerHeight('36%');
 

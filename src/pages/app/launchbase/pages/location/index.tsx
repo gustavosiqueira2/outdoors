@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import { useDispatch } from 'react-redux';
+import { LaunchBaseRouteParamList } from '../../../../../routes/launchbase.routes';
 
 import * as Location from 'expo-location';
 import MapView from 'react-native-maps';
@@ -13,11 +13,9 @@ import styles from './styles';
 import LocationHeader from './locationHeader';
 import Button from '../../components/button';
 
-const map = ({ navigation }) => {
+const map = ({ navigation }: LaunchBaseRouteParamList) => {
 
-  const dispatch = useDispatch();
-
-  const mapRef = useRef(null);
+  const mapRef = useRef<MapView>(null);
 
   const [location, setLocation] = useState({ coords: { latitude: 0, longitude: 0 } });
 
@@ -37,8 +35,7 @@ const map = ({ navigation }) => {
   useEffect(() => { getLocation() }, []);
 
   const handleClick = async () => {
-    const camera = await mapRef.current.getCamera();
-    dispatch({ type: 'ADD_EVENT_COORDS', coords: camera.center });
+    const camera = await mapRef.current?.getCamera();
     navigation.navigate('Preview');
   }
 

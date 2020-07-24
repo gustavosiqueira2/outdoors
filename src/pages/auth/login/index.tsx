@@ -1,12 +1,14 @@
 import React from 'react';
 
+import { AuthRouteParamList } from '../../../routes/auth.routes';
+
 import { View, Text } from 'react-native';
 import styles from './styles';
 
 import PhoneNumber from './phoneNumber';
 import RegisterButton from './registerButton';
 
-const login = ({ navigation }) => {
+const login = ({ navigation }: AuthRouteParamList) => {
 
   return (
     <View style={styles.container}>
@@ -22,11 +24,11 @@ const login = ({ navigation }) => {
       </View>
       <View style={styles.login_container}>
 
-        <PhoneNumber navigation={navigation}/>
+        <PhoneNumber navigation={navigation} />
 
         <RegisterButton icon='logo-facebook' text='Join with Facebook' color='#00f' />
         <RegisterButton icon='logo-google' text='Join with Google' color='#f00' />
-        
+
       </View>
     </View>
   )

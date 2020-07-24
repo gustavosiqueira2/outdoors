@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
   },
   send_button_container: {
     flex: 2,
-    borderColor: '#2FFF9D',
+    justifyContent: 'flex-end',
     marginLeft: 2,
     marginBottom: 5,
-    backgroundColor: '#fff',
     borderRadius: 2
   },
   send_button: {
     height: 40,
+    backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center'
   }

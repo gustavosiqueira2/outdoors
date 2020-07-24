@@ -1,15 +1,12 @@
 import React from 'react';
 
-import { Marker } from 'react-native-maps';
-
-import { useSelector, useDispatch } from 'react-redux';
+import { Marker, LatLng } from 'react-native-maps';
 
 const markers = () => {
 
-  const events = useSelector(state => state.events);
-  const dispatch = useDispatch();
+  const events: { coords: LatLng}[] = []
 
-  const handleClick = (event) => dispatch({ type: 'SELECT_EVENT', event });
+  const handleClick = (event: {}) => {}
 
   return (
     <>

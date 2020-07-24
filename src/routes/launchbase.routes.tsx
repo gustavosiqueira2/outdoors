@@ -1,12 +1,25 @@
 import React from 'react';
 
-import { createStackNavigator } from '@react-navigation/stack';
+import { RouteProp } from '@react-navigation/native';
+import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
-import Landing from '../pages/app/launchbase/pages/landing';
+import Landing from '../pages/app/launchbase/pages/landing/';
 import Basics from '../pages/app/launchbase/pages/basics';
 import Location from '../pages/app/launchbase/pages/location';
 import Preview from '../pages/app/launchbase/pages/preview';
+
+type NavigationProps = {
+  Landing: undefined,
+  Basics: any,
+  Location: any,
+  Preview: any,
+}
+
+export type LaunchBaseRouteParamList = {
+  navigation: StackNavigationProp<NavigationProps>,
+  route: RouteProp<NavigationProps, 'Landing' | 'Basics' | 'Location' | 'Preview'>
+}
 
 class event extends React.Component {
 

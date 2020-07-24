@@ -1,24 +1,24 @@
 import React from 'react';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { LaunchBaseRouteParamList } from '../../../../../routes/launchbase.routes';
 
 import { ScrollView, View, Text } from 'react-native';
 import styles from './styles';
 
 import Button from '../../components/button';
 
-const preview = ({ navigation }) => {
+const preview = ({ navigation }: LaunchBaseRouteParamList) => {
 
-  const dispatch = useDispatch()
-
-  const event = useSelector((state) => state.event_creating);
+  const event = {
+    name: 'a',
+    coords: {
+      latitude: '',
+      longitude: ''
+    }
+  }
 
   const handleClick = () => {
-    dispatch({
-      type: 'ADD_EVENT',
-      event: event
-    });
-    navigation.dangerouslyGetParent().navigate('Map');
+    navigation.dangerouslyGetParent()?.navigate('Map');
     navigation.popToTop();
   }
 

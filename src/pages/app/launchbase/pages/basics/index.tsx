@@ -1,29 +1,23 @@
 import React, { useRef } from 'react';
 
-import { useDispatch } from 'react-redux';
+import { LaunchBaseRouteParamList } from '../../../../../routes/launchbase.routes';
 
 import { View, Text } from 'react-native';
 import styles from './style';
 
+import { FormHandles } from '@unform/core';
 import { Form } from '@unform/mobile';
 import FormTextInput from '../../../../../components/Inputs/Text';
 
 import Button from '../../components/button';
 
-const basics = ({ navigation }) => {
+const basics = ({ navigation }: LaunchBaseRouteParamList) => {
 
-  const formRef = useRef(null);
-
-  const dispatch = useDispatch();
+  const formRef = useRef<FormHandles>(null);
 
   const handleClick = async () => {
-    dispatch({
-      type: 'ADD_EVENT_NAME',
-      // SEND ALL FORM, ACTUALLY ONLY NAME
-      event: { ...formRef.current.getData() },
-    })
     navigation.navigate('Location');
-    formRef.current.reset();
+    formRef.current?.reset();
   }
 
   return (
@@ -40,7 +34,7 @@ const basics = ({ navigation }) => {
         </Form>
       </View>
 
-      <Button action={() => formRef.current.submitForm()} />
+      <Button action={() => formRef.current?.submitForm()} />
 
     </View>
   )
