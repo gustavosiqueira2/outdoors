@@ -1,9 +1,9 @@
 <h1 align="center">
-  Gipo
+  Outdoors
 </h3>
 
 <h3 align="center">
-  A Cormecial and Styled View for your Github based Portifolio
+  Find the way of your nights here!
 </h3>
 
 <br>
