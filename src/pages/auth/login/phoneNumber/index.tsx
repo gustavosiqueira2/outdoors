@@ -1,7 +1,5 @@
 import React, { useState, useRef } from 'react';
 
-import { AuthRouteParamList } from '../../../../routes/auth.routes';
-
 import api from '../../../../services/api';
 import * as Yup from 'yup';
 
@@ -9,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/mobile';
-import TextInput from '../../../../components/Inputs/Text';
+import TextInput from '../../../../components/Inputs/Text/Masked';
 
 import { View, TouchableOpacity } from 'react-native';
 import styles from './styles';
@@ -22,23 +20,21 @@ const phoneNumber = ({ navigation }: any) => {
 
   const handleClick = async (data: { phonenumber: string }) => {
     try {
-      
-      setButtonDisabled(true);
-      const schema = Yup.object().shape({
-        phonenumber: Yup.string().min(10).max(11).required('Please insert a Valid Phone number')
-      })
 
+      setButtonDisabled(true);
+      const schema = Yup.object().shape({ phonenumber: Yup.string().min(10).max(11).required('Please insert a Valid Phone number') });
       await schema.validate(data);
 
-      navigation.navigate('Confirmation', { data, exist: false });
+      const response = await api.get('users?phonenumber=' + data.phonenumber);
+
+      navigation.navigate('Confirmation', { data, exist: response.data.length > 0 ? true : false });
       formRef.current?.reset();
       setButtonDisabled(false);
-
+      
     } catch (err) {
       err instanceof Yup.ValidationError && formRef.current?.setErrors({ [err.path]: err.message });
       setButtonDisabled(false);
     }
-    console.log(data.phonenumber)
   }
 
   return (

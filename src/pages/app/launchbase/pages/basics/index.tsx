@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 
 import { LaunchBaseRouteParamList } from '../../../../../routes/launchbase.routes';
 
+import AsyncStorage from '@react-native-community/async-storage';
+
 import { View, Text } from 'react-native';
 import styles from './style';
 
@@ -15,7 +17,8 @@ const basics = ({ navigation }: LaunchBaseRouteParamList) => {
 
   const formRef = useRef<FormHandles>(null);
 
-  const handleClick = async () => {
+  const handleClick = async (data: { name: string }) => {
+    await AsyncStorage.setItem('@outdoorsRegisterEvent', JSON.stringify(data));
     navigation.navigate('Location');
     formRef.current?.reset();
   }

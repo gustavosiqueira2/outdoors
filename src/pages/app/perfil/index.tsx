@@ -16,9 +16,9 @@ const perfil = () => {
 
       <View style={{ flex: 2, backgroundColor: '#1e1e1e' }}>
         <View style={{ flex: 2, flexDirection: 'row' }}>
-          <View style={{ flex: 3, alignItems: 'center', justifyContent: 'center', paddingTop: 20 }}>
+          <View style={{ flex: 3, alignItems: 'center', justifyContent: 'center', paddingTop: 30 }}>
             <View style={{ borderRadius: 50, width: 90, height: 90, backgroundColor: '#fff' }}>
-
+    
             </View>
           </View>
           <View style={{ flex: 7, flexDirection: 'row' }}>
@@ -33,7 +33,7 @@ const perfil = () => {
             </View> */}
           </View>
         </View>
-        <View style={{ flex: 2, padding: 10, paddingTop: 20 }}>
+        <View style={{ flex: 2, padding: 20, marginTop: 10, paddingBottom: 0 }}>
           <Text style={{ fontSize: 17, fontWeight: 'bold', marginBottom: 4, color: '#fff' }}>
             Guzin
           </Text>
@@ -45,10 +45,10 @@ const perfil = () => {
       </View>
 
       <View style={{ flex: 3, backgroundColor: '#121212' }}>
-        {/* <Tab.Navigator>
+        <Tab.Navigator>
           <Tab.Screen name='Teste' component={Random} />
           <Tab.Screen name='Teste1' component={Random1} />
-        </Tab.Navigator> */}
+        </Tab.Navigator>
       </View>
 
     </View>

@@ -19,8 +19,8 @@ const routes = () => {
   if (!fontLoaded)
     return <></>
   else
-    return <AuthRoutes />;
-    // return <AppRoutes />
+    // return <AuthRoutes />;
+    return <AppRoutes />
 
 }
 

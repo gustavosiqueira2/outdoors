@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Gustavo Farias",
+      "phonenumber": 19995306810
+    }
+  ],
+  "events": [
+    {
+      "userId": 1,
+      "name": "Festinha manow",
+      "coords": {
+        "latitude": -23.0980157,
+        "longitude": -47.2335552
+      }
+    }
+  ]
+}

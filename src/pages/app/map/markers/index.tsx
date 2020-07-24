@@ -1,25 +1,34 @@
 import React from 'react';
 
-import { Marker, LatLng } from 'react-native-maps';
+import useFetch from '../../../../hooks/useFetch';
+
+import { Marker } from 'react-native-maps';
+
+import event from '../../../../types/event';
 
 const markers = () => {
 
-  const events: { coords: LatLng}[] = []
+  const { data, error }: { data: event[], error: any } = useFetch('events');
 
-  const handleClick = (event: {}) => {}
+  const handleClick = (event: event) => {
+    console.log(event)
+  }
 
-  return (
-    <>
-      {events.map((event, i) =>
-        <Marker
-          onPress={() => handleClick(event)}
-          key={i}
-          coordinate={event.coords}
-          pinColor={'#' + Math.floor((Math.random() * 900) + 100)}
-        />
-      )}
-    </>
-  )
+  if (!data)
+    return <></>
+  else
+    return (
+      <>
+        {data.map((event: event, i: number) =>
+          <Marker
+            onPress={() => handleClick(event)}
+            key={i}
+            coordinate={event.coords}
+            pinColor={'#' + Math.floor((Math.random() * 900) + 100)}
+          />
+        )}
+      </>
+    )
 
 };
 

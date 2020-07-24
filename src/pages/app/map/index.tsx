@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { useDispatch } from 'react-redux';
-
 import * as Location from 'expo-location';
 import MapView from 'react-native-maps';
 import mapStyle from '../../../assets/mapStyle';
@@ -14,8 +12,6 @@ import EventTab from './eventTab';
 const map = () => {
 
   const [location, setLocation] = useState({ coords: { latitude: 0, longitude: 0 } });
-
-  const dispatch = useDispatch();
 
   const getLocation = async () => {
     let { status } = await Location.requestPermissionsAsync();
@@ -32,7 +28,7 @@ const map = () => {
 
   useEffect(() => { getLocation() }, []);
 
-  const handleClick = () => dispatch({ type: 'SELECT_EVENT', event: {} })
+  const handleClick = () => {}
 
   return (
     <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#1e1e1e' }}>
@@ -49,7 +45,7 @@ const map = () => {
         <Markers />
       </MapView>
 
-      <EventTab />
+      {/* <EventTab /> */}
 
     </View >
   );

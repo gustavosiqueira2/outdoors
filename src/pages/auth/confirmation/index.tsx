@@ -23,11 +23,9 @@ const confirmation = ({ route }: AuthRouteParamList) => {
   return (
     <View style={styles.container}>
       <View style={styles.title_container}>
-        <Text style={styles.title}>
-          Hey!
-        </Text>
+        <Text style={styles.title}>Hey!</Text>
         <Text style={styles.subtitle}>
-          {route.params?.exist ? "A sms was sended to your phone, use the code to confirm your registration." : "We sended a code to your phone! know you just need to check it and login :)"}
+          {!route.params?.exist ? "A sms was sended to your phone, use the code to confirm your registration." : "Welcome back, insert the code that we sended, and letgo!!"}
         </Text>
       </View>
       <View style={styles.input_container}>
@@ -37,14 +35,8 @@ const confirmation = ({ route }: AuthRouteParamList) => {
           </Form>
         </View>
         <View style={styles.button_container}>
-          <TouchableOpacity
-            style={styles.button}
-            disabled={buttonDisabled}
-            onPress={() => formRef.current?.submitForm()}
-          >
-            <Text style={styles.button_text}>
-              check
-            </Text>
+          <TouchableOpacity style={styles.button} disabled={buttonDisabled} onPress={() => formRef.current?.submitForm()}>
+            <Text style={styles.button_text}>check</Text>
           </TouchableOpacity>
         </View>
       </View>

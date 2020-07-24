@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, } from 'react';
+import React, { useState, useEffect, useRef, } from 'react';
 
 import { useField } from '@unform/core';
 
+import { mask, unMask } from 'remask';
+
 import { TextInput, Text } from 'react-native';
-import styles from './styles';
+import styles from '../styles';
 
 type InputProps = {
   name: string,
@@ -12,6 +14,8 @@ type InputProps = {
 }
 
 const textInput = ({ name, masks, customStyle, ...props }: InputProps | any) => {
+
+  const [value, setValue] = useState('');
 
   const inputRef = useRef<any>(null);
 
@@ -38,15 +42,23 @@ const textInput = ({ name, masks, customStyle, ...props }: InputProps | any) => 
     });
   }, [fieldName, registerField]);
 
+  const handleChange = async (newValue: string) => {
+    const unMaskedValue = unMask(String(newValue));
+    const maskedValue = mask(unMaskedValue, masks);
+    setValue(maskedValue);
+    inputRef.current.value = unMask(newValue);
+  }
+
   return (
     <>
       {error && <Text style={styles.error}>{error}</Text>}
       <TextInput
         ref={inputRef}
+        value={value}
         defaultValue={defaultValue}
         keyboardAppearance="dark"
         style={{ ...styles.input, ...customStyle }}
-        onChangeText={(v) => inputRef.current.value = v}
+        onChangeText={handleChange}
         {...props}
       />
     </>

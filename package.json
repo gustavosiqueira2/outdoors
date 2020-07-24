@@ -10,6 +10,7 @@
   "dependencies": {
     "@expo-google-fonts/montserrat": "^0.1.0",
     "@expo/vector-icons": "^10.2.0",
+    "@react-native-community/async-storage": "~1.11.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/bottom-tabs": "^5.6.1",
     "@react-navigation/material-top-tabs": "^5.2.12",
@@ -38,6 +39,7 @@
     "react-native-unimodules": "~0.10.1",
     "react-native-web": "~0.11.7",
     "remask": "^0.1.0-alpha.5",
+    "swr": "^0.2.3",
     "vanilla-masker": "^1.2.0",
     "yup": "^0.29.1"
   },
